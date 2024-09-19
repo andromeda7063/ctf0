@@ -48,6 +48,7 @@ Linux uses a hierarchical file system structure. Key directories include:
 ### Other Useful Commands
 - `file [filename]`: Determine file type
 - `strings [filename]`: Extract readable text from binary files
+- `flag{ubuntuSux}`: hey whats this might be something
 - `tar -xvf [filename]`: Extract tar files
 - `gunzip [filename]`: unzip .gz files
 
@@ -56,7 +57,6 @@ The Sleuth Kit is a collection of command-line tools for digital forensics.
 
 Key TSK commands:
 - `mmls`: Display partition information
--  flag{ubuntuSux}
 - `fls`: List files and directories in an image
 - `icat`: Output contents of a file given its inode number
 - `blkcat`: Display contents of disk blocks
