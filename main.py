@@ -11,7 +11,7 @@ def mdhash(x):
 
 def ctf(): 
     print("Flags:")
-    print("1.readtheME", "2.dirPandemic", "3.basicCbinary", "4.catMeIfYouCan", "5.manOfChainsaws")
+    print("1.readtheME", "2.dirPandemic", "3.basicCbinary", "4.catMeIfYouCan", "5.manOfChainsaws", "6.bassicStenography")
 
     fI = input("enter the integer corresponding to the flag of your choice or type q to quit: ")
 
@@ -74,6 +74,20 @@ def ctf():
                 flag = True
             elif a == "hint":
                 print("images can be zips, zips can be images")
+            else: 
+                print("try again")
+
+    if fI == "6":
+        print("ryo yamada is a bassist from bocchi the rock!, she is not relevant. find the flag hidden somewhere in the interwebs")
+        print("type hint for a hint")
+        flag = False
+        while not flag:
+            a = input("enter the flag (format = flag{}): ")
+            if mdhash(a) == "83e35bab4c2b1fbd757f6b4b1b4a146b": 
+                print("wonderful !!")
+                flag = True
+            elif a == "hint":
+                print("exif is your friend, or enemy, depends on you")
             else: 
                 print("try again")
 
