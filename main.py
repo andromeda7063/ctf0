@@ -11,7 +11,7 @@ def mdhash(x):
 
 def ctf(): 
     print("Flags:")
-    print("1.readtheME", "2.base64 pandemic", "3.basicCbinary", "4.catMeIfYouCan")
+    print("1.readtheME", "2.dirPandemic", "3.basicCbinary", "4.catMeIfYouCan", "5.manOfChainsaws")
 
     fI = input("enter the integer corresponding to the flag of your choice or type q to quit: ")
 
@@ -22,7 +22,6 @@ def ctf():
             a = input("enter the flag (format = flag{}): ")
             if mdhash(a) == "6c4cb797ddf535a03bf892a3e98796e6": 
                 print("nice !!")
-                done.append("1")
                 flag = True
             else: 
                 print("Try again")
@@ -35,7 +34,6 @@ def ctf():
             a = input("enter the flag (format = flag{}): ")
             if mdhash(a) == "a370976205078d849d8f0bcb7012bac4": 
                 print("congrats !!")
-                done.append("2")
                 flag = True
             else: 
                 print("try again")
@@ -46,25 +44,38 @@ def ctf():
         while not flag:
             a = input("enter the flag (format = flag{}): ")
             if mdhash(a) == "cf3616f9e8deff44400c2202b45e7539": 
-                print("congrats !!")
-                done.append("2")
+                print("you did it !!")
                 flag = True
             else: 
                 print("try again")
 
     if fI == "4":
-        print("Satoru Gojo is one of the main protagonists of the Jujutsu Kaisen series. He is a special grade jujutsu sorcerer and widely recognized as the strongest in the world. Satoru is the pride of the Gojo Clan, the first person to inherit both the Limitless and the Six Eyes in four hundred years.")
-        print("look deeper into the .jpg, do not stare at gojo")
+        print("gojo is the only one with six eyes, you might need to use them to find the flag")
+        print("look deeper into the .jpg, do not stare at gojo. type hint for a hint")
         flag = False
         while not flag:
             a = input("enter the flag (format = flag{}): ")
-            if mdhash(a) == "cf3616f9e8deff44400c2202b45e7539": 
-                print("congrats !!")
-                done.append("2")
+            if mdhash(a) == "61777b63f0caac26da5448762f2497de": 
+                print("cool !!")
                 flag = True
+            elif a == "hint":
+                print("every image has a hex, find the flag")
             else: 
                 print("try again")
 
+    if fI == "5":
+        print("makima is quite the manipulator, she is hiding something in the image, find the flag")
+        print("type hint for a hint")
+        flag = False
+        while not flag:
+            a = input("enter the flag (format = flag{}): ")
+            if mdhash(a) == "f29d85c5fb8927fe1089c89efccae2f3": 
+                print("excellent !!")
+                flag = True
+            elif a == "hint":
+                print("images can be zips, zips can be images")
+            else: 
+                print("try again")
 
     if fI == "q":
         exit()
